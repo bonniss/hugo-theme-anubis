@@ -1,0 +1,44 @@
+powered:
+  other: "powered by"
+
+theme:
+  other: "theme"
+
+readMore:
+  other: "Xem thêm"
+
+toNewPosts:
+  other: "Xem các bài mới"
+
+toOldPosts:
+  other: "Xem các bài cũ"
+
+tag:
+  other: "tag"
+
+Tags:
+  other: "Tags"
+
+Posts:
+  other: "Posts"
+
+category:
+  other: "category"
+
+Categories:
+  other: "Categories"
+
+toAllTags:
+  other: "to all tags"
+
+toAllCategories:
+  other: "to all categories"
+
+skipToContent:
+  other: "skip to main content"
+
+darkTheme:
+  other: "🌙"
+
+lightTheme:
+  other: "☀️"

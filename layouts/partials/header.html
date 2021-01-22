@@ -7,6 +7,9 @@
         {{ range .Site.Menus.main }}
         <a class="{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL | absLangURL }}" title="{{ .Title }}">{{ .Name }}</a>
         {{ end }}
+        {{ if eq .Site.Params.themeSwitcherPosition "header" }}
+            {{ partial "themeSwitcher.html" . }}
+        {{ end }}
     </nav>
 {{ else }}
     <nav></nav>

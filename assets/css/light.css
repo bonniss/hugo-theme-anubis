@@ -1,9 +1,9 @@
 :root {
-   /* light.css */ 
+   /* light.css */
     --font-color: #333;
     --bg-color: #fff;
 
-    --link-color:#1d60a3;
+    --link-color: #1e88e5;
     --link-state-color:#a31d1d;
     --link-state-border-color: rgba(163, 29, 29, .5);
 
@@ -12,6 +12,7 @@
 
     --pre-color: #333;
     --pre-bg-color: #f1f1f1;
+    --code-bg-color: #f0f0f0;
 
     --bq-color: #ccc;
     --hr-color: #ccc;
@@ -22,5 +23,5 @@
     --post-info-color: grey;
 
     --switcher-color: #fff;
-    --switcher-bg-color: #333; 
+    --switcher-bg-color: #333;
 }

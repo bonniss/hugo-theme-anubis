@@ -52,7 +52,7 @@ nav,
 section,
 summary {
     display: block;
-}	
+}
 
 .container {
     max-width: 42em;
@@ -109,7 +109,7 @@ a.skip-main {
     z-index:-999;
 }
 
-a.skip-main:focus, 
+a.skip-main:focus,
 a.skip-main:active {
     left: auto;
     top: 0px;
@@ -120,6 +120,10 @@ a.skip-main:active {
     padding: 4px 6px 4px 6px;
     text-decoration: underline;
     border: none;
+}
+
+p > a {
+    border-bottom: 2px dashed var(--link-color);
 }
 
 /* Table */
@@ -159,6 +163,18 @@ kbd {
     line-height: 154%;
 }
 
+pre code {
+    background-color: inherit;
+    padding: 0;
+    border-radius: 0;
+}
+
+code {
+    background-color: var(--code-bg-color);
+    padding: 2px 3px;
+    border-radius: 3px;
+}
+
 /* Styles */
 
 blockquote {
@@ -170,6 +186,7 @@ blockquote {
 p {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+    text-align: justify;
 }
 
 hr {
@@ -184,6 +201,7 @@ hr {
 header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 header a {
@@ -209,8 +227,8 @@ header nav {
     text-align: right;
 }
 
-header nav a {
-    margin-left: 2em;
+header nav > * {
+    margin-left: 1.5em;
 }
 
 .site-title {
@@ -254,7 +272,7 @@ main h1 {
     margin-left: 2em;
 }
 
-.post-navigation a:hover, 
+.post-navigation a:hover,
 .post-navigation a:focus,
 .post-navigation a:active {
     color: var(--link-state-color);
@@ -284,8 +302,8 @@ article:not(:last-of-type) {
 }
 
 article header h1 {
-    font-size: 1.35em;
-    line-height: 1.1em;
+    font-size: 1.75em;
+    line-height: 1.25em;
     margin-bottom: 0.5em;
     font-weight: 600;
 }
@@ -300,6 +318,7 @@ article header h1 a {
     color: var(--post-info-color);
     font-size: 0.75em;
     margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 .post-info a {
@@ -354,6 +373,11 @@ article header h1 a {
     margin-right: 1em;
 }
 
+.post-categories li > a,
+.post-tags li > a {
+    color: var(--tag-link-color);
+}
+
 article img {
     max-width: 100%;
     display: block;
@@ -403,7 +427,7 @@ article figcaption {
     display: flex;
     justify-content: space-between;
     margin-top: 3em;
-    text-align: center;   
+    text-align: center;
 }
 
 .pagination-item {
@@ -415,7 +439,7 @@ article figcaption {
     color: var(--pagination-link-color);
 }
 
-.pagination-item a:hover, 
+.pagination-item a:hover,
 .pagination-item a:focus {
     color: var(--link-state-color);
 }
@@ -440,6 +464,7 @@ article figcaption {
 .common-footer {
     border-top: thin solid var(--hr-color);
     padding-top: 1.5em;
+    padding-bottom: 1em;
     margin-top: 3em;
     font-size: 16px;
 }
@@ -467,7 +492,7 @@ ul.language-select > li, ul.footer-menu > li {
     padding: 0.5em 1em;
     font-size: 16px;
     border: none;
-    margin-bottom: 1em;
+    border-radius: 35px;
 }
 
 .h-card {
