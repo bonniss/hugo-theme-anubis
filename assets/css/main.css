@@ -87,11 +87,11 @@ main {
 }
 
 .container.has-aside > main > .main-column {
-    flex: 1 1 75%;
+    flex-basis: 75%;
 }
 
 .container.has-aside > main > aside {
-    flex: 1 1 25%;
+    flex-basis: 25%;
     padding-left: 2em;
 }
 
