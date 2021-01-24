@@ -11,14 +11,21 @@
 </head>
 <body>
     <a class="skip-main" href="#main">{{ i18n "skipToContent" | humanize }}</a>
-    <div class="container">
+    <div class="container{{ cond .Site.Params.hasAside " has-aside" "" }}">
         <header class="common-header">
             {{ block "header" . }}
                 {{ partial "header.html" . }}
             {{ end }}
         </header>
         <main id="main" tabindex="-1">
-            {{ block "main" . }}{{ end }}
+            <div class="main-column">
+                {{ block "main" . }}{{ end }}
+            </div>
+            {{ if .Site.Params.hasAside }}
+                <aside class="{{ cond .Site.Params.asideSticky "sticky" "" }}">
+                    {{ partial "main-aside.html" . }}
+                </aside>
+            {{end}}
         </main>
         {{ block "footer" . }}
             {{ partial "footer.html" . }}

@@ -1,0 +1,23 @@
+{{ $dateFormat := "2006-01-02" }}
+{{ if .Site.Params.dateFormat }}
+    {{ $dateFormat = .Site.Params.dateFormat }}
+{{ end }}
+
+<!-- <h3>⚡ {{ i18n .Data.Singular |  }}</h3> -->
+<h3>⚡ {{ i18n "Categories" }}</h3>
+<ul class="aside-categories">
+    {{ with .Site.Taxonomies.categories }}
+        {{ range $name, $taxonomy := . }}
+            <li>
+                <a href="{{ $taxonomy.Page.Permalink }}" class="btn">{{$taxonomy.Page.Title}} ({{ $taxonomy.Count }})</a>
+            </li>
+        {{ end }}
+    {{ end }}
+</ul>
+
+<h3>⚡ {{ i18n "Tags" }}</h3>
+<div class="aside-tags">
+    {{range ($.Site.GetPage "term" "tags").Pages }}
+        <span class="tag-chip"><a href="{{.Permalink}}">#{{.Title}}</a></li></span>
+    {{end}}
+</div>

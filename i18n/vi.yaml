@@ -8,31 +8,31 @@ readMore:
   other: "Xem thêm"
 
 toNewPosts:
-  other: "Xem các bài mới"
+  other: "Xem các bài mới hơn"
 
 toOldPosts:
-  other: "Xem các bài cũ"
+  other: "Xem các bài cũ hơn"
 
 tag:
   other: "tag"
 
 Tags:
-  other: "Tags"
+  other: "Tag"
 
 Posts:
-  other: "Posts"
+  other: "Danh sách bài viết"
 
 category:
-  other: "category"
+  other: "danh mục"
 
 Categories:
-  other: "Categories"
+  other: "Danh mục"
 
 toAllTags:
-  other: "to all tags"
+  other: "Đến danh sách tag"
 
 toAllCategories:
-  other: "to all categories"
+  other: "Đến danh sách danh mục"
 
 skipToContent:
   other: "skip to main content"
