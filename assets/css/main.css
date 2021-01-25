@@ -80,18 +80,26 @@ main {
 }
 
 .container.has-aside > main {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
 }
 
 .container.has-aside > main > .main-column {
-    flex-basis: 75%;
+    max-width: 75%;
 }
 
 .container.has-aside > main > aside {
-    flex-basis: 25%;
+    max-width: 25%;
     padding-left: 2em;
 }
 
@@ -99,6 +107,10 @@ main {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+}
+
+.container.has-aside .aside-tags .tag-chip {
+    display: inline-block;
 }
 
 .container.has-aside .aside-tags .tag-chip + .tag-chip {
@@ -578,8 +590,11 @@ ul.language-select > li, ul.footer-menu > li {
 
     /* When main layout configure to has aside column */
     .container.has-aside > main {
-        /* flex-direction: column; */
         display: block;
+    }
+
+    .container.has-aside > main > * {
+        max-width: unset !important;
     }
 
     .container.has-aside > main > aside {
