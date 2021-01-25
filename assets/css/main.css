@@ -95,11 +95,11 @@ main {
 }
 
 .container.has-aside > main > .main-column {
-    max-width: 75%;
+    width: 75%;
 }
 
 .container.has-aside > main > aside {
-    max-width: 25%;
+    width: 25%;
     padding-left: 2em;
 }
 
@@ -594,7 +594,7 @@ ul.language-select > li, ul.footer-menu > li {
     }
 
     .container.has-aside > main > * {
-        max-width: unset !important;
+        width: auto !important;
     }
 
     .container.has-aside > main > aside {
