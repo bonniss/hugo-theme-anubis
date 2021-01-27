@@ -184,6 +184,11 @@ p > a {
     border-bottom: 2px dashed var(--link-color);
 }
 
+/* Utils */
+.border-none {
+    border: none !important;
+}
+
 /* Table */
 thead {
     background: var(--thead-bg-color);
@@ -304,6 +309,16 @@ header nav > * {
 
 .site-title {
     white-space: nowrap;
+}
+
+.site-title > a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.site-title img {
+    margin-right: .25em;
 }
 
 .common-header {

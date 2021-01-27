@@ -1,5 +1,14 @@
 <h1 class="site-title">
-    <a href="{{ .Site.BaseURL | relLangURL }}">{{ .Site.Title }}</a>
+    <a href="{{ .Site.BaseURL | relLangURL }}" class="border-none">
+        {{ if .Site.Params.siteLogo }}
+            {{ $logoSize := cond (isset .Site.Params.siteLogo "size") .Site.Params.siteLogo.size 56 }}
+            <img src="{{ .Site.Params.siteLogo.url }}"
+                width="{{ $logoSize }}"
+                height="{{ $logoSize }}"
+                alt="{{ .Site.Title }}">
+        {{ end }}
+        <span>{{ .Site.Title }}</span>
+    </a>
 </h1>
 {{ if .Site.Menus.main }}
     <nav>
